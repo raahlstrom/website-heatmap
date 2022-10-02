@@ -40,20 +40,10 @@ Heatmap tracking is native to GTM, but with some pretty simple JavaScript we can
 ![Step 18 screenshot](https://images.tango.us/public/screenshot_eacb99bd-dabe-4865-97ec-d5c21c6cd397.png?crop=focalpoint&fit=crop&fp-x=0.9469&fp-y=0.1175&fp-z=2.8712&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1920%3A932)
 19. Click on Publish
 ![Step 19 screenshot](https://images.tango.us/public/screenshot_f40422ce-8f69-4a43-bfae-0dbcc56fbbbe.png?crop=focalpoint&fit=crop&fp-x=0.9549&fp-y=0.0424&fp-z=2.5990&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1920%3A932)
+
+
 ## Collecting Your Data in Google Analytics 4 (GA4)
 Now that GTM is collecting heatmap data we need to collect data in GA4.
-# [Workflow with GA4](https://app.tango.us/app/workflow/30d88da8-3237-4035-9e66-7317c171e418?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
-
-
-
-__Date:__ October 2, 2022
-
-__Author:__ Alexander Ahlstrom
-
-__Source:__ [Tango](https://app.tango.us/app/workflow/30d88da8-3237-4035-9e66-7317c171e418?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
-
-***
-
 1. First, we need to add our custom event dimensions to GA4. Click on Configure
 ![Step 1 screenshot](https://images.tango.us/public/screenshot_307c86c5-2fa2-42e3-b1c3-92a100e8ebb2.png?crop=focalpoint&fit=crop&fp-x=0.0583&fp-y=0.3868&fp-z=2.9091&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1920%3A932)
 2. Click on Custom definitions
@@ -98,8 +88,8 @@ __Source:__ [Tango](https://app.tango.us/app/workflow/30d88da8-3237-4035-9e66-73
 22. Click on TSV
 ![Step 22 screenshot](https://images.tango.us/public/screenshot_602bf50e-87bd-456f-abca-ea0d24532a7b.png?crop=focalpoint&fit=crop&fp-x=0.9169&fp-y=0.2157&fp-z=2.9161&w=1200&mark-w=0.2&mark-pad=0&mark64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n&ar=1920%3A932)
 
-## Visualize Heatmap with Tableau
 
+## Visualize Heatmap with Tableau
 Now that you have your data, we can use Tableau to visualize it.
 1. Clean data to remove leading rows at the top of file
 2. Import data into tableau
@@ -118,7 +108,7 @@ Now that you have your data, we can use Tableau to visualize it.
 15. Drag the heatmap card you created earlier onto the dashboard as a floating conatiner.
 16. Set it to the size of the dashboard.
 
-### Congratulations!!! You've Created a Heatmap. 
+#### Congratulations!!! You've Created a Heatmap. 
 
 ## Here is my dashboard
 
