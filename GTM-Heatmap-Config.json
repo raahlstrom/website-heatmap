@@ -1,0 +1,209 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2022-10-02 08:59:25",
+    "containerVersion": {
+        "path": "accounts/6051856210/containers/90256233/versions/3",
+        "accountId": "6051856210",
+        "containerId": "90256233",
+        "containerVersionId": "3",
+        "name": "Heatmap implementation",
+        "container": {
+            "path": "accounts/6051856210/containers/90256233",
+            "accountId": "6051856210",
+            "containerId": "90256233",
+            "name": "alexahlstromsportfolio.netlify.app",
+            "publicId": "GTM-MC6F7W8",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1658589804194",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6051856210/containers/90256233/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "tagId": "13",
+                "name": "Heatmap Track",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "heatmap_click"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "relative_x_coordinate"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Custom JS - Relative X Coordinate}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "relative_y_coordinate"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Custom JS - Relative Y Coordinate}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "Setup GA4"
+                    }
+                ],
+                "fingerprint": "1658634694194",
+                "firingTriggerId": [
+                    "9"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "triggerId": "9",
+                "name": "Click",
+                "type": "CLICK",
+                "fingerprint": "1658634694193"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "variableId": "4",
+                "name": "Custom JS - Click X Coordinate",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n \n var coordinateX;\n \n if (event == null) {\n coordinateX = 0;\n } else {\n coordinateX = event.pageX;\n }\n \n return coordinateX;\n}"
+                    }
+                ],
+                "fingerprint": "1658634694196",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "variableId": "5",
+                "name": "Custom JS - Click Y Coordinate",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n \n var coordinateY;\n \n if (event == null) {\n coordinateY = 0;\n } else {\n coordinateY = event.pageY;\n }\n \n return coordinateY;\n}"
+                    }
+                ],
+                "fingerprint": "1658634694196",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "variableId": "6",
+                "name": "Custom JS - Screen X Coordinate",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n \n var body = document.body;\n var html = document.documentElement;\n var width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);\n \n return width;\n \n}"
+                    }
+                ],
+                "fingerprint": "1658634694197",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "variableId": "7",
+                "name": "Custom JS - Relative X Coordinate",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n \n var clickCoordinateX = {{Custom JS - Click X Coordinate}};\n var screenCoordinateX = {{Custom JS - Screen X Coordinate}};\n var relativeX;\nrelativeX = (clickCoordinateX / screenCoordinateX).toFixed(2);\nreturn relativeX;\n \n}"
+                    }
+                ],
+                "fingerprint": "1658634694197",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "variableId": "11",
+                "name": "Custom JS - Screen Y Coordinate",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n \n var body = document.body;\n var html = document.documentElement;\n var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);\n \n return height;\n \n}"
+                    }
+                ],
+                "fingerprint": "1658634694198",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "variableId": "12",
+                "name": "Custom JS - Relative Y Coordinate",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n \n var clickCoordinateY = {{Custom JS - Click Y Coordinate}};\n var screenCoordinateY = {{Custom JS - Screen Y Coordinate}};\n var relativeY;\nrelativeY = (clickCoordinateY / screenCoordinateY).toFixed(2);\nreturn relativeY;\n \n}"
+                    }
+                ],
+                "fingerprint": "1658634694198",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6051856210",
+                "containerId": "90256233",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1658635075510",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6051856210/containers/90256233/versions/3?apiLink=version"
+    }
+}
